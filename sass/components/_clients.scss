@@ -1,0 +1,47 @@
+.work {
+	padding-top: 0;
+}
+
+.clients {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.2;
+	text-align: center;
+	letter-spacing: 0.03em;
+	margin-bottom: 50px;
+
+	color: $text-color;
+}
+
+.client-box {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.client-box__logo {
+	border: 1px solid $icons-color;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	fill: $icons-color;
+	padding: 16px 32px;
+	transition-property: fill, border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		fill: $button-color;
+		border-color: $button-color;
+	}
+}
+@media screen and (min-width: 768px) {
+	.client-box {
+		flex-direction: row;
+	}
+	.client-box__logo {
+		width: 170px;
+	}
+}
